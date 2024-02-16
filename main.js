@@ -3,6 +3,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 
     let addButton = document.getElementById('addButton')
+    let viewCookies  = document.getElementById('viewCookies')
 
 
     // Comprueba si existen las cookies `preferencia` y `ultima_visita` siempre que se cargue el DOM
@@ -39,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
             cookiesList += cookies[i] + "\n";
         }
 
-        console.log("Cookies vigentes:\n\n" + cookiesList);
+        viewCookies.innerHTML = "Cookies vigentes:\n\n <br>" + cookies.join("<br>");
     }
 
     // Recoje los datos del formulario para crear las cookies
